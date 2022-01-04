@@ -393,6 +393,7 @@ body {
     font-size: max(2.6vw, 3.2rem);
     letter-spacing: 4px;
     color: #0073bc;
+    text-decoration: none;
   }
   #contact__time {
     text-align: center;
