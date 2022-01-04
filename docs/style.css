@@ -551,7 +551,8 @@ body {
     background-image: url("img/MOBILEcontent.png");
     background-size: cover;
     width: 100vw;
-    height: 560.6vw;
+    height: auto;
+    padding-bottom: 10vw;
   }
   .content__time {
     text-align: center;
