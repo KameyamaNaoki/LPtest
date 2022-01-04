@@ -1,0 +1,826 @@
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+    sans-serif;
+  font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .white-container {
+    width: 62.5vw;
+    min-width: 730px;
+    background-color: white;
+    border-radius: max(30px, 2.4vw);
+  }
+  .white-incontainer {
+    width: 80%;
+    font-weight: bold;
+    font-size: 10px;
+    padding: max(6rem, 6vw) 0;
+  }
+  .sub-title {
+    text-align: center;
+    font-size: max(2.4rem, 1.9vw);
+    padding: max(70px, 5.6vw) 0px;
+    font-weight: bold;
+  }
+  #header-bar {
+    display: none;
+  }
+  #main-visual {
+    background-image: url("img/PCmain-visual.png");
+    background-size: 100%;
+    width: 100vw;
+    height: 33.85vw;
+  }
+  #main-visual section {
+    position: relative;
+    left: 14.4vw;
+    top: 6.3vw;
+    width: 70vw;
+  }
+  #main-visual__lets {
+    letter-spacing: 0.08vw;
+    font-weight: bold;
+    font-size: 2.34vw;
+    margin-bottom: 0.5rem;
+  }
+  #main-visual h1 {
+    position: relative;
+    left: -0.3vw;
+    letter-spacing: -0.08vw;
+    font-weight: bold;
+    font-size: 4.5vw;
+  }
+  #main-visual__intro {
+    letter-spacing: 0.04vw;
+    line-height: 3vw;
+    font-weight: bold;
+    font-size: 1.56vw;
+  }
+  #main-visual__logo {
+    width: 9vw;
+    height: auto;
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+  }
+  #main-visual__img--bubble {
+    width: 10vw;
+    height: auto;
+    position: absolute;
+    left: 55.5vw;
+    top: 19vw;
+  }
+  #main-visual__img--free {
+    color: white;
+    font-weight: bold;
+    font-size: 2.29vw;
+    letter-spacing: 0.3vw;
+    line-height: 3vw;
+    position: absolute;
+    left: 58vw;
+    top: 21.1vw;
+  }
+  #main-visual__img--earth {
+    width: 26.5vw;
+    height: auto;
+    position: absolute;
+    left: 63vw;
+    top: 5vw;
+  }
+  .header__logo {
+    width: 15vw;
+    height: auto;
+    position: relative;
+    top: 0.3vw;
+    left: 0.3vw;
+    cursor: pointer;
+  }
+  #time-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    background-size: 100%;
+    width: 100vw;
+    height: min(8.26vw, 150px);
+  }
+  /* #time-day section {
+    display: inline-block;
+  } */
+  #time-day div {
+    display: inline-block;
+    font-size: min(2.5vw, 3.1rem);
+    font-weight: bold;
+    letter-spacing: 1.5px;
+  }
+  .time-day__title {
+    background-color: #007759;
+    color: white;
+    padding: min(0.15vw, 0.15rem) min(1.5vw, 1.5rem);
+    border-radius: min(1vw, 1rem);
+    letter-spacing: 3px;
+    margin-right: 5px;
+  }
+  #time-day__location--title {
+    margin-left: 3vw;
+  }
+  #content {
+    text-align: center;
+    background-image: url("img/PCcontent.png");
+    background-size: cover;
+    width: 100vw;
+    height: auto;
+    padding-bottom: max(0.6vw, 6rem);
+  }
+  .content__time {
+    display: inline-block;
+    background-color: hsl(203, 100%, 37%);
+    border-radius: max(0.6rem, 0.52vw);
+    font-size: max(2.26rem, 1.82vw);
+    letter-spacing: 2px;
+    padding: 2px 12px;
+    /* margin-top: max(5.13rem, 4.9vw); */
+    color: white;
+  }
+  .content__pretitle {
+    margin-top: max(3.2rem, 2.5vw);
+    font-size: max(2.26rem, 1.82vw);
+  }
+  #content__title2 {
+    display: inline-block;
+    text-align: left;
+  }
+  #content h3 {
+    color: #0073bc;
+    font-weight: bold;
+    font-size: max(4.5rem, 3.6vw);
+    letter-spacing: 2px;
+  }
+  .content__abstract {
+    text-align: left;
+    font-size: max(1.55rem, 1.34vw);
+    margin-top: max(1.3rem, 1vw);
+    line-height: 3rem;
+  }
+  #content__guest--I {
+    margin-top: max(0.4vw, 4rem);
+    padding-bottom: max(0.7vw, 7rem);
+    text-align: left;
+    display: grid;
+    grid-template:
+      "title ... img" auto
+      "job ... img"
+      "name ... img"
+      "career ... img"
+      /48% 4% 48%;
+  }
+  #content__guest--M {
+    margin-top: max(0.4vw, 4rem);
+    text-align: left;
+    display: grid;
+    grid-template:
+      "title ... img" auto
+      "job ... img"
+      "name ... img"
+      "career ... img"
+      /65% 4% 31%;
+  }
+  .content__guest--title {
+    grid-area: title;
+  }
+  .content__guest--title h4 {
+    display: inline-block;
+    font-weight: bold;
+    font-size: max(1.1vw, 1.48rem);
+    color: hsl(203, 100%, 37%);
+    border: 2px solid hsl(203, 100%, 37%);
+    border-radius: max(0.4vw, 0.5rem);
+    padding: 2px 5px;
+  }
+  .content__guest--job {
+    grid-area: job;
+    font-size: max(1.56vw, 1.9rem);
+  }
+  .content__guest--name {
+    grid-area: name;
+  }
+  .content__guest--name rb {
+    font-size: max(3.6vw, 4.5rem);
+    border-right: 1rem;
+    letter-spacing: 0.2rem;
+  }
+  .content__guest--fname {
+    margin-right: 15px;
+  }
+  .content__guest--name rt {
+    font-weight: normal;
+    font-size: max(1.1vw, 0.7rem);
+  }
+  .content__guest--name span {
+    font-size: max(2vw, 2.5rem);
+  }
+  .content__guest--career {
+    grid-area: career;
+    font-size: max(1vw, 1.1rem);
+    font-weight: normal;
+    line-height: 200%;
+  }
+  .content__guest--img {
+    grid-area: img;
+    width: 100%;
+    height: auto;
+  }
+  #apply {
+    background-color: #f0fae6;
+    width: 100vw;
+    height: auto;
+  }
+  #apply__container {
+    position: relative;
+    top: 10vw;
+    left: 18.75vw;
+    width: 62.5vw;
+    height: 37.5vw;
+    background-color: white;
+    border-radius: 1.85vw;
+  }
+  .apply__text {
+    margin-bottom: 7%;
+    display: grid;
+    grid-template:
+      "title space main"
+      /19% 1% 80%;
+  }
+  .apply__text--title {
+    grid-area: title;
+    font-weight: bold;
+    font-size: max(1.25vw, 1.5rem);
+  }
+  .apply__text--main {
+    grid-area: main;
+    font-weight: normal;
+    font-size: max(1.1vw, 1.42rem);
+  }
+  .apply__text--bullet {
+    color: #007759;
+    font-size: max(1.25vw, 1.5rem);
+  }
+  #apply__button {
+    display: block;
+    font-size: max(1.5vw, 1.9rem);
+    padding: max(1vw, 1.24rem) 0;
+    background-color: #007759;
+    border: none;
+  }
+  #apply__button:hover {
+    background-color: #07ad83;
+    border: none;
+  }
+  #arrow {
+    position: relative;
+    top: min(-8.8rem, -9vw);
+    left: max(20vw, 248px);
+    width: 40px;
+    height: 10px;
+    border-bottom: 1.5px solid white;
+    border-right: 1.5px solid white;
+    transform: skew(45deg);
+  }
+  #apply__capacity {
+    text-align: center;
+    margin-top: max(4.6vw, 5.8rem);
+  }
+  #apply__capacity--main {
+    display: inline-block;
+    color: #007759;
+    font-weight: bold;
+    font-size: max(2.1vw, 2.6rem);
+    border-bottom: solid 2px #007759;
+  }
+  #apply__capacity--main span {
+    font-size: max(2.8vw, 3.5rem);
+    text-decoration: none;
+  }
+  #apply__capacity--atn {
+    font-size: max(1.3vw, 1.6rem);
+    margin: 0%;
+    padding-bottom: max(3.1vw, 3.8rem);
+  }
+  #access {
+    background-image: url("img/PCaccess.png");
+    background-size: cover;
+    width: 100vw;
+    height: auto;
+    padding-bottom: 8vw;
+  }
+  #access__hotel {
+    display: grid;
+    grid-template:
+      "img ... address"
+      "img ... parking"
+      "img ... charge"
+      /60% 4% 36%;
+  }
+  #access__hotel--img {
+    grid-area: img;
+    width: 100%;
+    height: auto;
+  }
+  #access__hotel--address {
+    grid-area: address;
+  }
+  #access__hotel--address h3 {
+    font-weight: bold;
+    font-size: max(1.6vw 2rem);
+  }
+  #access__hotel--address {
+    font-weight: normal;
+    font-size: max(1vw, 1.3rem);
+  }
+  #access__hotel--parking {
+    grid-area: parking;
+  }
+  #access__hotel--parking h4 {
+    font-size: max(1.2vw, 1.5rem);
+  }
+  #access__hotel--parking {
+    font-weight: normal;
+    font-size: max(0.9vw, 1.16rem);
+  }
+  #access__hotel--charge {
+    grid-area: charge;
+  }
+  #access__hotel--charge--free {
+    font-weight: normal;
+    font-size: max(0.9vw, 1.16rem);
+    margin: 0;
+  }
+  #access__hotel--charge--atn {
+    font-weight: normal;
+    font-size: max(0.7vw, 0.9rem);
+    margin-top: max(0.3vw, 0.3rem);
+  }
+  #access__map h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: max(1.56vw, 1.9rem);
+    margin-top: max(3.6vw, 4.4rem);
+    margin-bottom: max(1.8vw, 2.2rem);
+  }
+  .access__map--gmap {
+    aspect-ratio: 10/4;
+    width: 100%;
+    height: auto;
+  }
+  #contact {
+    background-color: #f0fae6;
+    width: 100vw;
+    height: auto;
+  }
+  #contact h2 {
+    padding-bottom: 30px;
+  }
+  #contact__office {
+    text-align: center;
+    font-size: max(1vw, 1.3rem);
+  }
+  #contact__tel {
+    text-align: center;
+    font-weight: bold;
+    font-size: max(2.6vw, 3.2rem);
+    letter-spacing: 4px;
+    color: #0073bc;
+  }
+  #contact__time {
+    text-align: center;
+    font-size: max(1vw, 1.3rem);
+    padding-bottom: 50px;
+  }
+  #organizer {
+    background-color: white;
+    width: 100vw;
+    height: auto;
+    text-align: center;
+  }
+  #organizer h2 {
+    font-weight: normal;
+    padding: 30px 0;
+  }
+  #organizer__logo {
+    width: 250px;
+    height: auto;
+    cursor: pointer;
+    padding-bottom: 60px;
+  }
+  #copyright {
+    background-color: #0073bc;
+    width: 100vw;
+    height: auto;
+  }
+  #copyright p {
+    font-size: 13px;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 14px;
+  }
+}
+@media all and (max-width: 767px) {
+  .white-container {
+    width: 78.6vw;
+    background-color: white;
+    border-radius: 5vw;
+  }
+  .white-incontainer {
+    width: 80%;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 10vw 0;
+  }
+  .sub-title {
+    text-align: center;
+    font-size: 4.3vw;
+    padding: 8vw 0px;
+    font-weight: bold;
+  }
+  #header-bar {
+    background-color: white;
+    background-size: 100%;
+    width: 100vw;
+    height: 16vw;
+    text-align: center;
+  }
+  .header__logo {
+    height: 70%;
+    width: auto;
+    position: relative;
+    top: 15%;
+    cursor: pointer;
+  }
+  #main-visual {
+    background-image: url("img/MOBILEmain-visual.png");
+    background-size: 100%;
+    width: 100vw;
+    height: 160vw;
+  }
+  #main-visual section {
+    width: 85vw;
+    position: relative;
+    left: 12.4vw;
+    top: 6.3vw;
+  }
+  #main-visual__lets {
+    letter-spacing: 0.3vw;
+    font-weight: bold;
+    font-size: 5.86vw;
+    margin-bottom: 0.5rem;
+  }
+  #main-visual h1 {
+    position: relative;
+    left: -0.3vw;
+    letter-spacing: -0.35vw;
+    margin-bottom: 5.5vw;
+    font-weight: bold;
+    font-size: 14vw;
+  }
+  #main-visual__intro {
+    letter-spacing: -0.3vw;
+    line-height: 7vw;
+    font-weight: bold;
+    font-size: 3.86vw;
+  }
+  #main-visual__img--bubble {
+    width: 25vw;
+    height: auto;
+    position: absolute;
+    left: 9.9vw;
+    top: 115.8vw;
+  }
+  #main-visual__img--free {
+    color: white;
+    font-weight: bold;
+    font-size: 6.17vw;
+    letter-spacing: 0.5vw;
+    line-height: 7vw;
+    position: absolute;
+    left: 16vw;
+    top: 121.3vw;
+  }
+  #main-visual__img--earth {
+    width: 64vw;
+    height: auto;
+    position: absolute;
+    left: 27.5vw;
+    top: 105vw;
+  }
+  #time-day {
+    text-align: center;
+    background-color: white;
+    background-size: 100%;
+    width: 100vw;
+    height: 72vw;
+  }
+  #time-day section {
+    text-align: center;
+    display: block;
+    width: 100vw;
+  }
+  #time-day div {
+    font-size: 5.6vw;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+  }
+  .time-day__title {
+    display: inline-block;
+    width: 17.3vw;
+    background-color: #007759;
+    color: white;
+    border-radius: 1.8vw;
+    letter-spacing: 3px;
+    margin-top: 6vw;
+  }
+  .time-day__detail {
+    line-height: 10vw;
+    margin-top: 3vw;
+  }
+  #content {
+    background-image: url("img/MOBILEcontent.png");
+    background-size: cover;
+    width: 100vw;
+    height: 560.6vw;
+  }
+  .content__time {
+    text-align: center;
+    display: block;
+    background-color: hsl(203, 100%, 37%);
+    border-radius: 1.8vw;
+    font-size: 4.7vw;
+    letter-spacing: 0.5vw;
+    padding: 0.8vw 0;
+    color: white;
+  }
+  .content__pretitle {
+    margin: 4vw 0;
+    font-size: 4.4vw;
+    margin: 3vw 0;
+  }
+  #content h3 {
+    color: #0073bc;
+    font-weight: bold;
+    font-size: 8vw;
+    letter-spacing: 2px;
+    margin: 3vw 0;
+  }
+  .content__abstract {
+    text-align: left;
+    font-size: 3.6vw;
+    line-height: 5.6vw;
+    letter-spacing: 0.21vw;
+    margin: 3vw 0;
+  }
+  #content__abstract--period {
+    letter-spacing: -1.6vw;
+  }
+  #content__abstract--end {
+    letter-spacing: 0.35vw;
+  }
+  .content__guest--img {
+    width: 100%;
+    height: auto;
+    padding: 7vw 0;
+  }
+  .content__guest--title h4 {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 4.6vw;
+    color: hsl(203, 100%, 37%);
+    border: 0.5vw solid hsl(203, 100%, 37%);
+    border-radius: 1.6vw;
+    padding: 0.5vw 1.5vw;
+  }
+  .content__guest--job {
+    font-size: 3.7vw;
+    margin: 3vw 0;
+  }
+  .content__guest--name rb {
+    font-size: 9.3vw;
+    letter-spacing: 0.2rem;
+    margin-bottom: 5vw;
+  }
+  .content__guest--fname {
+    margin-right: 2.6vw;
+  }
+  .content__guest--name rt {
+    font-weight: normal;
+    font-size: 2.6vw;
+  }
+  .content__guest--name span {
+    font-size: 6.6vw;
+  }
+  .content__guest--career {
+    font-size: 2.5vw;
+    font-weight: normal;
+    line-height: 5vw;
+  }
+  #content__2 {
+    margin-top: 8vw;
+  }
+  #apply {
+    background-color: #f0fae6;
+    width: 100vw;
+    height: auto;
+  }
+  #apply__container {
+    position: relative;
+    top: 20vw;
+    left: 10.7vw;
+    width: 78.6vw;
+    height: 130vw;
+    background-color: white;
+    border-radius: 5vw;
+  }
+  .apply__text {
+    margin-bottom: 7%;
+    font-size: 3.6vw;
+  }
+  .apply__text--title {
+    font-size: 4.6vw;
+    font-weight: bold;
+    margin-bottom: 5%;
+  }
+  .apply__text--main {
+    font-weight: normal;
+    margin-bottom: 14%;
+  }
+  .apply__text--bullet {
+    color: #007759;
+  }
+  #apply__button {
+    display: block;
+    text-align: center;
+    background-color: #007759;
+    font-size: 4vw;
+    padding: 3vw 0;
+    border-radius: 1.5vw;
+  }
+  /* #apply__button:hover {
+    background-color: #07ad83;
+  } */
+  #arrow {
+    position: relative;
+    left: 25vw;
+    top: -17vw;
+    width: 5vw;
+    height: 1vw;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transform: skew(45deg);
+  }
+  #apply__capacity {
+    position: relative;
+    top: 15%;
+    text-align: center;
+  }
+  #apply__capacity--main {
+    display: inline-block;
+    color: #007759;
+    font-weight: bold;
+    font-size: 7.3vw;
+    border-bottom: solid 2px #007759;
+  }
+  #apply__capacity--main span {
+    font-size: 9vw;
+    text-decoration: none;
+  }
+  #apply__capacity--atn {
+    font-size: 3.3vw;
+    padding-bottom: 2vw;
+    margin: 0;
+  }
+  #MOBILEapplybutton {
+    width: 60vw;
+    height: 13.3vw;
+    position: relative;
+    top: 152vw;
+    left: 20vw;
+  }
+  #access {
+    background-image: url("img/MOBILEaccess.png");
+    background-size: cover;
+    width: 100vw;
+    height: auto;
+  }
+  #access section {
+    padding-top: 4vw;
+  }
+  #access-container {
+    width: 78.6vw;
+    background-color: transparent;
+  }
+  #access-incontainer {
+    width: 100%;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 0;
+  }
+  #access__hotel--img {
+    width: 100%;
+    height: auto;
+  }
+  #access__hotel--address h3 {
+    font-weight: bold;
+    font-size: 5.6vw;
+  }
+  #access__hotel--address {
+    font-weight: normal;
+    font-size: 4.26vw;
+  }
+  #access__hotel--parking h4 {
+    font-weight: bold;
+    font-size: 4.26vw;
+  }
+  #access__hotel--parking p {
+    font-weight: normal;
+    font-size: 3.7vw;
+  }
+  #access__hotel--charge h4 {
+    font-weight: bold;
+    font-size: 4.26vw;
+  }
+  #access__hotel--charge--free {
+    font-weight: normal;
+    font-size: 3.7vw;
+  }
+  #access__hotel--charge--atn {
+    font-weight: normal;
+    font-size: 2.6vw;
+  }
+  #access__map h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 4.26vw;
+    margin-top: 12vw;
+    margin-bottom: 7vw;
+  }
+  .access__map--gmap {
+    width: 100vw;
+    height: 100vw;
+    position: relative;
+    top: 1vw;
+  }
+  #contact {
+    background-color: #f0fae6;
+    width: 100vw;
+    height: auto;
+  }
+  #contact__office {
+    text-align: center;
+    font-size: 4vw;
+  }
+  #contact a {
+    display: block;
+    text-align: center;
+    font-size: 8vw;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    text-decoration: none;
+    color: #0073bc;
+  }
+  #contact__time {
+    text-align: center;
+    font-size: 4vw;
+    padding-bottom: 7vw;
+  }
+  #organizer {
+    background-color: white;
+    width: 100vw;
+    height: 40vw;
+  }
+  #organizer h2 {
+    font-weight: normal;
+    padding-bottom: 4vw;
+  }
+  #organizer a {
+    display: block;
+    text-align: center;
+  }
+  #organizer__logo {
+    height: auto;
+    width: 30vw;
+    cursor: pointer;
+  }
+  #copyright {
+    background-color: #0073bc;
+    width: 100vw;
+    height: 18.6vw;
+  }
+  #copyright p {
+    padding: 5vw 0;
+    text-align: center;
+    font-size: 2.4vw;
+    color: white;
+  }
+}
