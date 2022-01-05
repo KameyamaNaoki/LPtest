@@ -237,7 +237,7 @@ body {
     background-color: #f0fae6;
     width: 100vw;
     height: auto;
-    padding-bottom: max(3.1vw, 3.8rem);
+    padding-bottom: 50px;
   }
   #apply__container {
     position: relative;
