@@ -112,7 +112,7 @@ body {
   } */
   #time-day div {
     display: inline-block;
-    font-size: min(2.5vw, 3.1rem);
+    font-size: min(2.2vw, 2.7rem);
     font-weight: bold;
     letter-spacing: 1.5px;
   }
@@ -237,6 +237,7 @@ body {
     background-color: #f0fae6;
     width: 100vw;
     height: auto;
+    padding-bottom: max(3.1vw, 3.8rem);
   }
   #apply__container {
     position: relative;
@@ -304,10 +305,15 @@ body {
     font-size: max(2.8vw, 3.5rem);
     text-decoration: none;
   }
-  #apply__capacity--atn {
+  #apply__capacity--atncontainer {
+    width: 50vw;
+    min-width: 584px;
+  }
+  .apply__capacity--atn {
+    text-align: left;
     font-size: max(1.3vw, 1.6rem);
-    margin: 0%;
-    padding-bottom: max(3.1vw, 3.8rem);
+    padding-left: 1em;
+    text-indent: -1em;
   }
   #access {
     background-image: url("img/PCaccess.png");
@@ -476,7 +482,7 @@ body {
   #main-visual__lets {
     letter-spacing: 0.3vw;
     font-weight: bold;
-    font-size: 5.6vw;
+    font-size: 5.4vw;
     margin-bottom: 0.5rem;
   }
   #main-visual h1 {
@@ -522,7 +528,7 @@ body {
     background-color: white;
     background-size: 100%;
     width: 100vw;
-    height: 72vw;
+    height: 80vw;
   }
   #time-day section {
     text-align: center;
@@ -634,6 +640,7 @@ body {
     background-color: #f0fae6;
     width: 100vw;
     height: auto;
+    padding-bottom: 5vw;
   }
   #apply__container {
     position: relative;
@@ -697,10 +704,16 @@ body {
     font-size: 9vw;
     text-decoration: none;
   }
-  #apply__capacity--atn {
-    font-size: 3.3vw;
-    padding-bottom: 2vw;
+  #apply__capacity--atncontainer {
+    width: 75vw;
+  }
+  .apply__capacity--atn {
+    text-align: left;
+    font-size: 3vw;
+    padding-bottom: 1vw;
     margin: 0;
+    padding-left: 1em;
+    text-indent: -1em;
   }
   #MOBILEapplybutton {
     width: 60vw;
